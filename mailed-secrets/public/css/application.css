@@ -1,0 +1,94 @@
+.center{
+  text-align: center;
+}
+
+/*****************************************************************************
+/
+******************************************************************************/
+/*****************************************************************************
+For Landing Page
+******************************************************************************/
+article {
+  -webkit-columns: 2 200px;
+  -moz-columns: 2 200px;
+  columns: 2 200px;
+  -webkit-column-gap: 4em;
+  -moz-column-gap: 4em;
+  column-gap: 4em;
+  text-align: justify;
+}
+
+.introduction {
+  width: 90%;
+  margin: auto;
+}
+/*****************************************************************************
+/Profile
+******************************************************************************/
+
+/*****************************************************************************
+For Profile Page Header and Nav
+******************************************************************************/
+.new-letter {
+  margin: 10px 0 0 0;
+  width: 125px;
+  height: 28px;
+  text-align: center;
+  background: #d9534f;
+  color: white;
+}
+
+.new-letter h3 {
+  padding: 6px;
+}
+.user-name {
+  font-size: 1.5em
+}
+
+.nav-bar {
+  background: #337ab7;
+}
+.nav-bar ul {
+  text-align: center;
+  display: table;
+  margin: 10% auto 0 auto;
+}
+
+.nav-bar ul li{
+  color: #fff;
+  font-size: 2.0em;
+  width: 10%;
+  padding: 0px 10% 0 12%;
+  height: 50px;
+  border-color: #5cb85c;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#active {
+  background:  #5cb85c
+}
+
+/*****************************************************************************
+For Profile Page Letters View
+******************************************************************************/
+
+.letters-container {
+}
+.letters  {
+  text-align: center;
+}
+
+.letters li  {
+  min-width: 300px;
+  width: 25%;
+  display: inline-block;
+}
+
+.letters li:hover {
+  background: green;
+}
+
+.letters li  img {
+  width: 50%;
+}
