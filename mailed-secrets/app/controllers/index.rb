@@ -56,6 +56,7 @@ post '/users/address/add' do
     address_zip:      params[:zip],
     address_country:  params[:country],
   }
+  #need to add a catch for this error
   refined_address = @lob.addresses.verify(address)
   refined_address = refined_address["address"]
   userAddress = @lob.addresses.create(

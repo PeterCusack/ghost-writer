@@ -16,6 +16,10 @@ gem 'bcrypt'
 gem 'shotgun'
 gem 'lob'
 gem 'stripe'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'httparty'
+gem 'koala'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -27,4 +31,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'pry-debugger'
 end

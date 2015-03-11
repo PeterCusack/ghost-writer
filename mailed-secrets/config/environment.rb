@@ -14,12 +14,20 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
-
+require 'pry-debugger'
 require 'sinatra'
 require "sinatra/reloader" if development?
 require 'lob'
 require 'stripe'
 require 'erb'
+require 'omniAuth'
+require 'omniauth-facebook'
+require 'httparty'
+require 'koala'
+require 'json'
+use OmniAuth::Builder do
+	provider :facebook, '583264651809192', 'ec7e86599adee3a7be48f35c60e9ce45', :callback_url => ('http://fuf.me:9393/users/authorize/facebook') #(ENV['BASE_DOMAIN']
+end
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 

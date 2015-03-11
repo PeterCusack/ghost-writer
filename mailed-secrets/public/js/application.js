@@ -29,6 +29,10 @@ landingView = {
       event.preventDefault
       viewHeplers.hideModal()
     });
+
+    // $(".facebook-login").click(function(event){
+      
+    // });
   },
 
 };
