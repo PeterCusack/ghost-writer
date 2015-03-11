@@ -2,11 +2,13 @@
   text-align: center;
 }
 
+.inline-list li {
+  display: inline-block;
+}
+
+
 /*****************************************************************************
-/
-******************************************************************************/
-/*****************************************************************************
-For Landing Page
+For Landing Page /
 ******************************************************************************/
 article {
   -webkit-columns: 2 200px;
@@ -22,12 +24,99 @@ article {
   width: 90%;
   margin: auto;
 }
-/*****************************************************************************
-/Profile
-******************************************************************************/
+
+.how-it-works li{
+  width: 18%;
+  min-width: 150px;
+  display: inline-block;
+  border: 3px solid purple;
+  padding: 1%;
+  margin: 1%;
+}
+
+.how-it-works li img {
+  width: 100%
+}
+
+/*.sign-in {
+  text-align: center;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 75px;
+}
+
+.sign-in li {
+  display: table-cell;
+  vertical-align: middle;
+  border: 2px dotted gray;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 25px;
+  height: 300px;
+  width: 35%;
+}*/
 
 /*****************************************************************************
-For Profile Page Header and Nav
+Sign Up Process Styling
+******************************************************************************/
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: auto
+}
+
+::-webkit-scrollbar { 
+display: none; 
+}
+.modal-form-container{
+  background: rgba(0,0,0,0.85);
+  width: 100%;
+  height: 100%;
+}
+
+
+.white-text {
+  color: white;
+}
+
+.modal-form-container h3 {
+  margin: 5%;
+  color: white;
+  font-size: 2.5em;
+}
+.sign-up-form form label {
+  display: inline-block;
+  color: white;
+}
+.sign-up-form form input {
+  margin: 2%;
+  width: 111%;
+  height: 30px;
+  color: black;
+}
+/*.oauth-buttons li button{
+  width: 34%;
+  height: 48px;
+}
+
+.oauth-buttons li button img {
+  width: 100%;
+}*/
+
+.modal-exit {
+  position: absolute;
+  color: white;
+  top: 0px;
+  left: 27px;
+}
+/*****************************************************************************
+For Profile Page Header and Nav /Profile
 ******************************************************************************/
 .new-letter {
   margin: 10px 0 0 0;
@@ -41,6 +130,7 @@ For Profile Page Header and Nav
 .new-letter h3 {
   padding: 6px;
 }
+
 .user-name {
   font-size: 1.5em
 }
@@ -66,14 +156,84 @@ For Profile Page Header and Nav
 }
 
 #active {
-  background:  #5cb85c
+  background:  #5cb85c;
 }
 
 /*****************************************************************************
-For Profile Page Letters View
+For Letter Editor
+******************************************************************************/
+.letter-editor {
+  display: none;
+  background: #fff;
+}
+
+#editor {
+  font-size: 1.3em;
+  width: 66%;
+  min-height: 800px;
+  background: tan;
+  margin: 2% auto;
+  /*background: rgba(0,0,0,0.85);*/
+  /*color:white;*/
+  box-shadow: 0px 9px 33px 5px #888888
+}
+
+
+.proof-read {
+  margin: auto;
+  width: 25%;
+  height: 38px;
+  margin: 0 0 5% 0;
+  background:  ;
+}
+
+/*****************************************************************************
+For Letter Proof read
+******************************************************************************/
+.details {
+  position: fixed;
+  overflow: auto;
+  width: 440px;
+  right: -390px;
+  top: 0px;
+  bottom: 0px;
+  background: whitesmoke;
+}
+
+.details-shower-hider {
+  position: absolute;
+  background: gray;
+  width: 50px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.details-header {
+  font-size: 2.0em;
+  background: blue;
+  border-bottom: 3px solid black;
+}
+.add-address form{
+  width: 32%;
+  margin: auto;
+}
+
+.details-container {
+  margin: 4%;
+  list-style: none;
+}
+
+.details-section {
+  font-size: 2.5em;
+  margin: 27% 0 0 0;
+}
+/*****************************************************************************
+For Profile Page Multi-Letters View
 ******************************************************************************/
 
 .letters-container {
+
 }
 .letters  {
   text-align: center;

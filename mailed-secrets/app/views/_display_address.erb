@@ -1,0 +1,11 @@
+<address>
+  <%= @user_address["name"] %> <br/>
+  <%= @user_address["address_line1"] %> <br/>
+  <% if @user_address["address_line2"]   %>
+  <%= @user_address["address_line2"] %> <br/>
+  <% end %>
+  <%= @user_address["address_city"] %> <br/>
+  <%= @user_address["address_state"] %> <br/>
+  <%= @user_address["address_zip"] %> <br/>
+  <%= @user_address["address_country"]%> <br/>
+</address>

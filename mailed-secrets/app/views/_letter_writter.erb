@@ -1,0 +1,75 @@
+<div class="letter-editer-container">
+  <div class="new-letter-hide new-letter"><h3>Back</h3></div>
+  <div id="toolbar">
+    <button class="ql-bold">Bold</button>
+    <button class="ql-italic">Italic</button>
+  </div>
+  <div id="editor">
+    <div>Hello World!</div>
+    <div>Some initial <b>bold</b> text</div>
+    <div><br></div>
+  </div>
+  <div class="center">
+  <button type="submit" class="proof-read">Proof Read </button>
+  </div>
+</div>
+<div class="details">
+  <div class="details-shower-hider">
+  </div>  
+
+
+    <ul class="details-container">
+      <li class="center details-header">
+        Summery
+      </li>
+      <li class="details-section">
+       $1.10
+      </li>
+      <li class="details-section">
+        Payment: 
+      </li>
+      <li>
+        Card: AMEX
+      </li>
+      <li>
+        ****-******-*3452
+      </li>
+
+      <form action="" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_ryuRPpBLDrxs0P0gHEwdSfrz"
+          data-amount="2000"
+          data-name="Demo Site"
+          data-description="2 widgets ($20.00)"
+          data-image="/128x128.png">
+        </script>
+      </form>
+      <div>
+        Address:
+        <!-- This is the address we will be sending you letter -->
+        <% if !@user_address %>
+          it looks like we don't have address for you
+          <button class="confiure-address">Configure</button>
+        <% else %>
+            <%= erb :_display_address %>
+            <button class="confiure-address">Edit</button>
+        <% end %>
+      </div>
+    </ul>
+    <button class="send-letter">Approve & Send</button>
+</div>
+
+<!-- <div class="modal-form-container modal add-payment">
+  <h2 class="modal-exit">X</h2>
+  <div class="sign-up-form">
+    <%= erb :_payment_form %>
+  </div>
+</div> -->
+
+<div class="modal-form-container modal add-address">
+  <h2 class="modal-exit">X</h2>
+  <div class="sign-up-form">
+    <%= erb :_address_information,  :layout => false %>
+  </div>
+</div>

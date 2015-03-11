@@ -1,0 +1,29 @@
+<form class="form-style">
+  <label for="full_name">Full Name:</label>
+  <input type="text" name="full_name" value="<%="#{@current_user.first_name} #{@current_user.last_name} "%>"> <!-- auto populate from user name created-->
+  <label for="adddress_line1">Address Line 1:</label>
+  <input type="text" name="address_line1" value="<%= "#{@user_address["address_line1"]}" %>">
+
+  <label for="adddress_line2">Address Line 2:</label>
+  <input type="text" name="address_line2" value="<%= "#{@user_address["address_line2"]}" %>">
+
+  <label for="country">Country:</label>
+  <input type="text" name="country" value="<%= "#{@user_address["address_country"]}" %>" >
+
+  <label for="city">City:</label>
+  <input type="text" name="city" value="<%= "#{@user_address["address_city"]}" %>">
+
+  <label for="state">State:</label>
+  <input type="text" name="state" value="<%= "#{@user_address["address_state"]}" %>">
+
+  <label for="zip">Zip:</label>
+  <input type="text" name="zip" value="<%= "#{@user_address["address_zip"]}" %>">
+  <input type="submit" class="new-address-submit">
+</form>
+
+
+
+
+
+
+

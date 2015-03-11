@@ -1,58 +1,63 @@
-<div class="center">
-  <div class="new-letter"><h3>New Letter</h3></div>
-
-  <div class="user-name center">
-    <h1>Peter Cusack</h1>
-    <form action="/users/logout" method="post">
-      <input type="submit" value="logout">
-    </form>
-  </div>
-
-  <nav class="nav-bar">
-    <ul>
-      <li style="border-right: 5px solid  white">Drafts</li>
-      <li id="active">Letters</li>
-      <li style="border-left: 5px solid  white">Profile</li>
-    </ul>
-  </nav>
+<div class="modal letter-editor">
+  <%= erb :_letter_writter %>
 </div>
-  <div class="letters-container">
-    <ul class="letters">
-      <li>
-        <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-        <h3>Title Goes Here</h3>
-        <h4>12/24/2015</h4>
-        <h4>Delivered</h4>
-      </li>
-      <li>
-        <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-        <h3>Title Goes Here</h3>
-        <h4>12/24/2015</h4>
-        <h4>Delivered</h4>
-      </li>
-      <li>
-        <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-        <h3>Title Goes Here</h3>
-        <h4>12/24/2015</h4>
-        <h4>Delivered</h4>
-      </li>
-      <li>
-        <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-        <h3>Title Goes Here</h3>
-        <h4>12/24/2015</h4>
-        <h4>Delivered</h4>
-      </li>
-      <li>
-        <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-        <h3>Title Goes Here</h3>
-        <h4>12/24/2015</h4>
-        <h4>Delivered</h4>
-      </li>
-      <li>
-        <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-        <h3>Title Goes Here</h3>
-        <h4>12/24/2015</h4>
-        <h4>Delivered</h4>
-      </li>
-    </ul>
+<section class="profile">
+  <div class="center">
+    <div class="new-letter-show new-letter"><h3>New Letter</h3></div>
+
+    <div class="user-name center">
+      <h1>Peter Cusack</h1>
+      <form action="/users/logout" method="post">
+        <input type="submit" value="logout">
+      </form>
+    </div>
+
+    <nav class="nav-bar">
+      <ul>
+        <li style="border-right: 5px solid  white">Drafts</li>
+        <li id="active">Letters</li>
+        <li style="border-left: 5px solid  white">Profile</li>
+      </ul>
+    </nav>
   </div>
+  <div class="letters-container">
+      <ul class="letters">
+        <li>
+          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
+          <h3>Title Goes Here</h3>
+          <h4>12/24/2015</h4>
+          <h4>Delivered</h4>
+        </li>
+        <li>
+          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
+          <h3>Title Goes Here</h3>
+          <h4>12/24/2015</h4>
+          <h4>Delivered</h4>
+        </li>
+        <li>
+          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
+          <h3>Title Goes Here</h3>
+          <h4>12/24/2015</h4>
+          <h4>Delivered</h4>
+        </li>
+        <li>
+          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
+          <h3>Title Goes Here</h3>
+          <h4>12/24/2015</h4>
+          <h4>Delivered</h4>
+        </li>
+        <li>
+          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
+          <h3>Title Goes Here</h3>
+          <h4>12/24/2015</h4>
+          <h4>Delivered</h4>
+        </li>
+        <li>
+          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
+          <h3>Title Goes Here</h3>
+          <h4>12/24/2015</h4>
+          <h4>Delivered</h4>
+        </li>
+      </ul>
+  </div>
+</section>
