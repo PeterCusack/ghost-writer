@@ -19,9 +19,8 @@ end
 
 get '/users/authorize/facebook' do 
   redirectURI = URI("http://fuf.me:9393/users/authorize/facebook")
-  response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=583264651809192&redirect_uri=#{redirectURI}&client_secret=ec7e86599adee3a7be48f35c60e9ce45&code=#{params[:code]}")
+  response = HTTParty.post("https://graph.facebook.com/oauth/access_token?client_id=583264651809192&redirect_uri=#{redirectURI}&client_secret=ec7e86599adee3a7be48f35c60e9ce45&code=#{params[:code]}")
   token = Rack::Utils.parse_nested_query(response.body)
-  # binding.pry
   @graph = Koala::Facebook::API.new(token["access_token"])
   if !(User.where(email: @graph.get_object("me")["email"]).first)
     # create_and_validate 

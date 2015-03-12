@@ -6,7 +6,7 @@
     <div class="new-letter-show new-letter"><h3>New Letter</h3></div>
 
     <div class="user-name center">
-      <h1>Peter Cusack</h1>
+      <h1><%= @current_user.full_name %></h1>
       <form action="/users/logout" method="post">
         <input type="submit" value="logout">
       </form>
@@ -22,42 +22,13 @@
   </div>
   <div class="letters-container">
       <ul class="letters">
-        <li>
+        <% current_user.letters.each do |letter_object| %>
+        <li class="letter-display">
           <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-          <h3>Title Goes Here</h3>
-          <h4>12/24/2015</h4>
-          <h4>Delivered</h4>
+          <h3>title goes here</h3>
+          <h4><%= letter_object.created_at.to_s[0..10] %></h4>
         </li>
-        <li>
-          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-          <h3>Title Goes Here</h3>
-          <h4>12/24/2015</h4>
-          <h4>Delivered</h4>
-        </li>
-        <li>
-          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-          <h3>Title Goes Here</h3>
-          <h4>12/24/2015</h4>
-          <h4>Delivered</h4>
-        </li>
-        <li>
-          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-          <h3>Title Goes Here</h3>
-          <h4>12/24/2015</h4>
-          <h4>Delivered</h4>
-        </li>
-        <li>
-          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-          <h3>Title Goes Here</h3>
-          <h4>12/24/2015</h4>
-          <h4>Delivered</h4>
-        </li>
-        <li>
-          <img src="http://www.openzambia.com/wp-content/uploads/2014/11/letter-icon.gif">
-          <h3>Title Goes Here</h3>
-          <h4>12/24/2015</h4>
-          <h4>Delivered</h4>
-        </li>
+        <% end %>
       </ul>
   </div>
 </section>

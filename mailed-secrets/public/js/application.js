@@ -52,8 +52,32 @@ var profileController = {
     var html = letter_editor.getHTML();
     console.log(html)
   },
+  updateHtmlText: function(){
+    letter_editor = new Quill('#editor');
+    formhtml = letter_editor.getHTML()
+    $.ajax({
+      url: '/users/letters/template',
+      method: 'post',
+    }).success(function(response){
+      html = $(response)
+      text = $(html).find('.text').first().html()
+      sendData = {fileHTML: response, letterText: text }
+      $.ajax({
+        url:'/users/letters/new',
+        method: 'post',
+        dataType: 'json',
+        data: sendData,
+      }).done(function(){
+        console.log("made it through")
+      })
+    })
+  },
+
 };
 
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 profileView = {
   startListeners: function(){
     $(".new-letter-show").click(function(event){
@@ -100,15 +124,16 @@ profileView = {
       })
     });
 
-    // $(".send-letter").click(function(event){
-    //   event.preventDefault()
-    //   $.ajax({
-    //     url: 'user/letter/send',
-    //     method: 'post'
-    //   }).done(function(response){
-    //     p response
-    //   })
-    // };
+    $(".send-letter").click(function(event){
+      event.preventDefault()
+      profileController.updateHtmlText()
+    });
+
+    $(".letter-display").click(function(event){
+      event.preventDefault()
+      console.log(this)
+      console.log($(this))
+    })
   },
 
   renderLetterEdit: function(){
