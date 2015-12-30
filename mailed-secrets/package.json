@@ -1,0 +1,18 @@
+{
+  "name": "ghostWritter",
+  "devDependencies": {
+    "scrollmagic": "latest"
+  },
+  "description": "> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.",
+  "version": "1.0.0",
+  "main": "application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mailed-secrets"
+  },
+  "author": "Peter Cusack",
+  "license": "ISC"
+}

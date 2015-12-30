@@ -9,9 +9,20 @@ var viewHeplers = {
 };
 
 
-var landingContoller  = {
 
+
+var landingContoller  = {
 };
+
+// var controller = new ScrollMagic.Controller();
+
+// create a scene
+// new ScrollMagic.Scene({
+        // duration: 100,    // the scene should last for a scroll distance of 100px
+        // offset: 50        // start this scene after scrolling for 50px
+    // })
+    // .setPin("#my-sticky-element") // pins the element for the the scene's duration
+    // .addTo(controller); // assign the scene to the controller
 
 landingView = {
   startListeners: function(){
@@ -147,12 +158,32 @@ profileView = {
 };
 
 
+var tweenStuff = function () {
+  var animationsController = new ScrollMagic.Controller();
 
+    // var shakeTween = TweenMax.to('.letter-machine', 1, {
+    //   transform: 'rotate(15deg)'
+    // });
+
+  // var shakeRight = TweenMax.to(".letter-machine", 0.3, {transform:"rotate(25deg)", yoyo:true, repeat:-1});
+  // var shakeLeft = TweenMax.to(".letter-machine", 0.3, {transform:"rotate(-15deg)", yoyo:true, repeat:-1});
+  var shaketween =  TweenLite.fromTo('.letter-machine', 0.4, {transform:"rotate(10deg)"}, {transform: "rotate(-10deg)", clearProps: 'x', repeat: 10 });
+  // var shaketween = (".letter-machine", 0.3, {x:-1}, {x:1, ease:RoughEase.ease.config({strength:8, points:20, template:Linear.easeNone, randomize:false}) , clearProps:"x"})
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: ".letter-machine", 
+    duration: 300
+  })
+  .setTween(shaketween)
+  .addTo(animationsController)
+}
 
 $(document).ready(function() {
 startListeners = function(){
   landingView.startListeners()
   profileView.startListeners()
+  tweenStuff()
 }
+
 startListeners()
 });

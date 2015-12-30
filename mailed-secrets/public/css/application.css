@@ -25,35 +25,39 @@ article {
   margin: auto;
 }
 
+.guy-at-computer {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.letter-icon {
+  position: relative;
+  width: 10%;
+  top: 0;
+  right: 0;
+}
+
+.letter-machine {
+  position: relative;
+  margin: auto;
+  width: 35%;
+}
+
 .how-it-works li{
-  width: 18%;
-  min-width: 150px;
+  /*width: 18%;*/
+  /*min-width: 150px;  */
   display: inline-block;
-  border: 3px solid purple;
-  padding: 1%;
-  margin: 1%;
+  /*border: 3px solid purple;*/
+  /*padding: 1%;*/
+  /*margin: 1%;*/
 }
 
 .how-it-works li img {
-  width: 100%
+  /*width: 100%*/
 }
 
-/*.sign-in {
-  text-align: center;
-  display: table;
-  border-collapse: separate;
-  border-spacing: 75px;
-}
-
-.sign-in li {
-  display: table-cell;
-  vertical-align: middle;
-  border: 2px dotted gray;
-  box-shadow: 10px 10px 5px #888888;
-  border-radius: 25px;
-  height: 300px;
-  width: 35%;
-}*/
 
 /*****************************************************************************
 Sign Up Process Styling
@@ -100,14 +104,15 @@ display: none;
   height: 30px;
   color: black;
 }
-/*.oauth-buttons li button{
-  width: 34%;
-  height: 48px;
+
+.oauth-buttons {
+  list-style: none;
 }
 
-.oauth-buttons li button img {
-  width: 100%;
-}*/
+.oauth-buttons li {
+  width: 60%;
+  height: 48px;
+}
 
 .modal-exit {
   position: absolute;
