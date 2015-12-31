@@ -1,3 +1,4 @@
+
 # P10 Build Something Beautiful
 
 ##Learning Competencies
@@ -33,3 +34,7 @@ Once you've come up with an idea, get one of your teachers to approve it.
 Once apporoved, start building your project. Be sure to submit a link to where we
 can see your site live.
 
+
+# ghost-writer
+Ghost writer is an anonymous letter sharing application built on Sinatra
+>>>>>>> 49460f8a32a3e200e3585048100942e94d8a1c2f
